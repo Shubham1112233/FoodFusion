@@ -52,26 +52,7 @@ The application uses **NgRx** for centralized state management, providing:
 - Side effect management with NgRx Effects
 - Type-safe actions and reducers
 
-### Module Structure
-```
-src/app/
-├── auth/                 # Authentication module
-│   ├── store/           # Auth state management
-│   ├── auth.service.ts  # Authentication service
-│   └── auth.guard.ts    # Route guard
-├── recipes/             # Recipes module
-│   ├── store/          # Recipe state management
-│   ├── recipe-list/    # Recipe listing component
-│   ├── recipe-detail/  # Recipe detail view
-│   └── recipe-edit/    # Recipe form
-├── shopping-list/       # Shopping list module
-│   ├── store/          # Shopping list state
-│   └── shopping-edit/  # Shopping list editor
-├── shared/             # Shared components and utilities
-│   ├── alert/         # Alert component
-│   ├── loading-spinner/ # Loading indicator
-│   └── directives/    # Reusable directives
-└── store/             # Root state configuration
+
 ```
 
 ## 🚀 Getting Started
@@ -205,28 +186,6 @@ src/app/
 - **Token Expiration**: Automatic logout on token expiration
 - **Secure Storage**: Encrypted data storage in Firebase
 
-## 🎯 Future Enhancements
-
-- [ ] Recipe categories and tags
-- [ ] Advanced search and filtering
-- [ ] Recipe ratings and reviews
-- [ ] Meal planning calendar
-- [ ] Print recipe functionality
-- [ ] Share recipes with other users
-- [ ] Import recipes from URLs
-- [ ] Nutrition information
-- [ ] Grocery store integration
-- [ ] Dark mode support
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📝 License
 
