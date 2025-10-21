@@ -1,0 +1,14 @@
+.btn-success {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+hr {
+  margin: 20px 0;
+  border-top: 2px solid #ecf0f1;
+}
+
+.col-xs-12 {
+  padding: 10px 15px;
+}
+

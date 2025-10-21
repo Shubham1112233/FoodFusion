@@ -1,6 +1,6 @@
 {
-  "name": "ngrx-08-finished",
-  "version": "0.0.0",
+  "name": "food-fusion",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

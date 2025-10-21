@@ -17,6 +17,7 @@ import * as AuthActions from './store/auth.actions';
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
+  styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit, OnDestroy {
   isLoginMode = true;
@@ -55,14 +56,12 @@ export class AuthComponent implements OnInit, OnDestroy {
     const password = form.value.password;
 
     if (this.isLoginMode) {
-      // authObs = this.authService.login(email, password);
-
       this.store.dispatch(
-        AuthActions.loginStart({ email: email, password: password })
+        AuthActions.loginStart({ email, password })
       );
     } else {
       this.store.dispatch(
-        AuthActions.signupStart({ email: email, password: password })
+        AuthActions.signupStart({ email, password })
       );
     }
 
@@ -83,7 +82,6 @@ export class AuthComponent implements OnInit, OnDestroy {
   }
 
   private showErrorAlert(message: string) {
-    // const alertCmp = new AlertComponent();
     const alertCmpFactory =
       this.componentFactoryResolver.resolveComponentFactory(AlertComponent);
     const hostViewContainerRef = this.alertHost.viewContainerRef;

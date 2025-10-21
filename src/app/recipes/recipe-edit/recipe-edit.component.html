@@ -13,6 +13,17 @@
           <button type="button" class="btn btn-danger" (click)="onCancel()">
             Cancel
           </button>
+          <div class="validation-info" *ngIf="!recipeForm.valid">
+            <small class="text-warning">
+              <strong>⚠️ Please complete all required fields:</strong>
+              <ul>
+                <li *ngIf="recipeForm.get('name')?.invalid && recipeForm.get('name')?.touched">Recipe name is required</li>
+                <li *ngIf="recipeForm.get('imagePath')?.invalid && recipeForm.get('imagePath')?.touched">Image URL is required</li>
+                <li *ngIf="recipeForm.get('description')?.invalid && recipeForm.get('description')?.touched">Description is required</li>
+                <li *ngIf="recipeForm.get('ingredients')?.invalid">At least one valid ingredient is required</li>
+              </ul>
+            </small>
+          </div>
         </div>
       </div>
       <div class="row">

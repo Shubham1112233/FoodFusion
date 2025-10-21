@@ -39,16 +39,9 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    // const newRecipe = new Recipe(
-    //   this.recipeForm.value['name'],
-    //   this.recipeForm.value['description'],
-    //   this.recipeForm.value['imagePath'],
-    //   this.recipeForm.value['ingredients']);
     if (this.editMode) {
-      // this.recipeService.updateRecipe(this.id, this.recipeForm.value);
       this.store.dispatch(RecipesActions.updateRecipe({index: this.id, newRecipe: this.recipeForm.value}));
     } else {
-      // this.recipeService.addRecipe(this.recipeForm.value);
       this.store.dispatch(RecipesActions.addRecipe({recipe: this.recipeForm.value}));
     }
     this.onCancel();
@@ -87,7 +80,6 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     let recipeIngredients = new FormArray([]);
 
     if (this.editMode) {
-      // const recipe = this.recipeService.getRecipe(this.id);
       this.storeSub = this.store
         .select('recipes')
         .pipe(
