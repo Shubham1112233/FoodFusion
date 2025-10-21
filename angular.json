@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngrx-08-finished",
+            "outputPath": "dist/food-fusion",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
